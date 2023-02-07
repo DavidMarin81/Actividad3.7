@@ -118,7 +118,7 @@ public class ConsultasAsociacionesHQL {
 			System.out.println("Apartado 7");
 			
 			List<Object[]> datos = session.createQuery(
-					" SELECT e.ename, e.emp.ename FROM Emp e ")
+					" SELECT e.ename, e2.ename FROM Emp e LEFT JOIN e.emp e2 ")
 					.list(); 
 			System.out.println(datos.size());
 			
